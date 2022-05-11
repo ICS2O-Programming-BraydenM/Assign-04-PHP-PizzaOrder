@@ -72,7 +72,7 @@
 <!-- adding a drop down menu for pizza size -->
           <center>
         <label for="size">Choose your pizza size!</label>
-        	<select name="size" name="size">
+        	<select name="size" id="size">
           	<option value="options">Pizza sizes</option>
           	<option value="small">Small/Piccolo</option>
           	<option value="medium">Medium/Medio</option>
@@ -83,7 +83,7 @@
 <!-- adding a drop down menu for crust type -->
           <center>
         		<label for="crust">Choose your crust type!!</label>
-        		<select name="crust" name="crust">
+        		<select name="crust" id="crust">
           		<option value="option">Crust type</option>
               <option value="flatbread">Flatbread/Focaccia Azzima</option>
               <option value="stuffed">Stuffed Crust/Crosta Farcito</option>
@@ -118,11 +118,11 @@
               </center>
             <center>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-            <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+            <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="wine-no" checked>
             <span class="mdl-radio__label">No thank you.</span>
             </label>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-            <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+            <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="wine-yes">
             <span class="mdl-radio__label">Yes, please.</span>
             </label>
             </center>

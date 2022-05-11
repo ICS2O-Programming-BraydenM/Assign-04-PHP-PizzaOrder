@@ -1,6 +1,9 @@
 <?php
     // display constants
+    
+    // constant tax price
     define(HST, 0.13);
+    // constant topping price
     define(TOPPING_PRICE, 0.50);
 
     //get user input for pizza size and crust type
@@ -32,33 +35,53 @@
   
   // check all check boxes to see how many there are, from https://www.techiedelight.com/count-number-check-boxes-javascript/
  
-    $numberOfCheckboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    // initialized variable for topping cost 
+     $numberOfToppings = 0;
 
-  $numberOfToppings = $numberOfCheckboxes.length;
+  // changing the number of toppings based on checkboxes selected (beginning with if cheese is clicked)
+  if (isset($_POST["topping1"])){
+   //++ adds one to the total number of chexkboxes
+   $numberOfToppings++;
+   }
+  //if black olives are clicked
+  if (isset($_POST["topping2"])){
+   $numberOfToppings++;
+   }
+  //if spicy sausage is clicked
+  if (isset($_POST["topping3"])){
+   $numberOfToppings++;
+   }
+  //if mushrooms are clicked
+  if (isset($_POST["topping4"])){
+   $numberOfToppings++;
+   }
+  //if garlic sauce is clicked
+  if (isset($_POST["topping5"])){
+   $numberOfToppings++;
+   }
 
   $toppingCost = $numberOfToppings * TOPPING_PRICE;
 
   //initializing variable for extra side of wine 
   $wineCost = 0;
+
+  $wineChecked = $_POST["options"];
     
   // if statement to see what radio button was clicked and to find cost of wine
-  if(document.getElementById('option-1').checked) {
+  if (isset($_POST["wine-no"])) {
   //No thank you radio button is clicked
     $wineCost = 0;
   }
-  else if(document.getElementById('option-2').checked) {
+  else if (isset($_POST["wine-yes"])) {
   //Yes please radio button is clicked
     $wineCost = 27.00;
-}
+  }
 
   // calculate subtotal, tax and total
   $subTotal = $baseCost + $toppingCost + $wineCost;
-  $subTotal_rounded = number_format($subTotal, 2);
   $tax = $subTotal * HST;
-  $tax_rounded = number_format($tax, 2);
   $total = $subTotal + $tax;
-  $total_rounded = number_format($total, 2);
 
 // display results back to user
-  echo "Your subtotal is " . "$" . $subTotal_rounded . "<br> Your tax amount is " . "$" + $tax_rounded . " <br> Your total is " . "$" . $total_rounded . "<br> Thank you for ordering from us! We hope to see you again soon :)";
+  echo "Your subtotal is $" . number_format($subTotal, 2) . ".<br>The amount of tax added is $" . number_format($tax, 2) . ".<br>Your total is $" . number_format($total, 2) . ".";
 ?>
