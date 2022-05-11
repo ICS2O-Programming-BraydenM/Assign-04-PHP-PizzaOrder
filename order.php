@@ -64,15 +64,15 @@
 
   //initializing variable for extra side of wine 
   $wineCost = 0;
-
+  // making a variable fetching information from radio button
   $wineChecked = $_POST["options"];
     
   // if statement to see what radio button was clicked and to find cost of wine
-  if (isset($_POST["wine-no"])) {
+  if ($wineChecked == "wine-no") {
   //No thank you radio button is clicked
     $wineCost = 0;
   }
-  else if (isset($_POST["wine-yes"])) {
+  else if ($wineChecked == "wine-yes") {
   //Yes please radio button is clicked
     $wineCost = 27.00;
   }
