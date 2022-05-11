@@ -65,8 +65,9 @@
 
   <center>
     <?php
-    echo "<h3>~~~Our origin~~~</h3></center>";
+    echo "<h3>~~~Our origin~~~</h3>";
     ?>
+  </center>
   <center>
     <?php
     echo "<p>The founder of Star Sun Pizzeria, Brayden MacMillan, originally was born and raised in Ottawa, Canada, but came to Italy to start a new life here and had a lifelong dream of opening an Italian pizzeria right here, in Positano, Italy! Unfortunately, he passed away last year, but he was 97 years old! His legacy will live on forever in this business, and we will always give thanks to him for creating this wonderful community. We have now been at this location for 64 years, since 2040! All of our employees have a passion for crafting top tier Italian pizzas, and we hope to see you on our cliffside padio this summer :)  </p>";
@@ -84,8 +85,12 @@
 <!-- Showing my restaurant locations across the world -->
   <center>
   <?php
-<h3>Locations</h3></center>
-  <center><h6>Due to our outstanding pizzas, our company has been turned into a chain of restaurants and have been spread out across the world! Find us near you. </h6></center>
+  echo "<h3>Locations</h3>";
+  ?>
+  <?php
+  echo "<h6>Due to our outstanding pizzas, our company has been turned into a chain of restaurants and have been spread out across the world! Find us near you. </h6>";
+  ?>
+ </center>
 
 <!-- An ordered list -->
   <center><ol>
@@ -116,14 +121,22 @@
 		<br></br>
 
 <!-- Another image for aesthetic -->
-  <center><h5>Gallery</h5></center>
+  <center>
+  <?php
+  echo "<h5>Gallery</h5>";
+  ?>
+  </center>
   <center><img src="./images/pizzas.jpg" width="800" length="950"></center><br><br>
 
 <!-- adding a video showcasing Positano, Italy -->
     <iframe width="560" height="315" src="https://www.youtube.com/embed/76lAXtHr3mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!-- Header showing hours of operation of my restaurant -->
-      <center><h2 style="background-color:lightseagreen"><font face="Garamond">Hours of operation:</font></h2></center>
+      <center>
+        <?php
+        echo "<h2>Hours of operation:</h2>";
+        ?>
+      </center>
     
 <!-- CSS part of square card asking if user is curious to know when my restaurant is operating (this style part must be in index.html and style.css in order to work! ) -->
 <style>

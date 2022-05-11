@@ -46,6 +46,16 @@ body {
   font-family: times new roman;
 }
 
+h5 {
+  color: teal;
+  font-family: times new roman;
+}
+
+h3 {
+  background-color: mistyrose;
+  font-family: times new roman;
+}
+
 .glow {
   font-size: 80px;
   color: #fff;

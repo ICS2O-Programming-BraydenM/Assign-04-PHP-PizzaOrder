@@ -67,12 +67,12 @@
     </center>
     <br><br>
     
-<!-- adding  a JavaScript button that calculates cost -->
-			<form action="javascript:displayCost()">			
+<!-- adding a button that calculates cost -->
+			<form action="./order.php" method="post" target="results">			
 <!-- adding a drop down menu for pizza size -->
           <center>
         <label for="size">Choose your pizza size!</label>
-        	<select name="size" id="size">
+        	<select name="size" name="size">
           	<option value="options">Pizza sizes</option>
           	<option value="small">Small/Piccolo</option>
           	<option value="medium">Medium/Medio</option>
@@ -83,7 +83,7 @@
 <!-- adding a drop down menu for crust type -->
           <center>
         		<label for="crust">Choose your crust type!!</label>
-        		<select name="crust" id="crust">
+        		<select name="crust" name="crust">
           		<option value="option">Crust type</option>
               <option value="flatbread">Flatbread/Focaccia Azzima</option>
               <option value="stuffed">Stuffed Crust/Crosta Farcito</option>
@@ -91,7 +91,11 @@
           </center>
         <br><br>
 <!-- adding check boxes for toppings -->
-            <center><h3>Choose your toppings.</h3></center>
+            <center>
+              <?php
+              echo "<h3>Choose your toppings.</h3>";
+              ?>
+            </center>
             <center>
             <input type="checkbox" id="topping1" name="topping1" value="topping1">
             <label for="topping1"> Cheese/Formaggio</label><br>
@@ -107,7 +111,11 @@
             </center>
         
 <!-- Radio button asking for a side of wine -->
-              <center><h5 style="color:teal"><font face="Times New Roman">Would you like a side order of our finest red wine, made from the Italian vineyards of Barolo & Barbaresco?</font></h5></center>
+              <center>
+                <?php
+                echo "<h5>Would you like a side order of our finest red wine, made from the Italian vineyards of Barolo & Barbaresco?</h5>";
+                ?>
+              </center>
             <center>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
             <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
@@ -123,9 +131,9 @@
         <center><input type="submit" value="Display Cost"></center>
       </form>
 
-<!-- display results (cost) to user -->
-		<br><center><div id="display-results"></center>
-		</div>
+<!-- Adding an iframe that displays results to user -->
+          <center><iframe id="results" name="results">
+		</iframe></center>
     
 <!-- Link back to home page -->
     <center>

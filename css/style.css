@@ -50,6 +50,11 @@ h4 {
   color: purple;
 }
 
+h2 {
+  background-color: lightseagreen;
+  font-family: Garamond, Times New Roman, serif;
+}
+
 p {
   color: black;
 }
