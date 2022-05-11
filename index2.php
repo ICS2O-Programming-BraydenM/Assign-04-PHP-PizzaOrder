@@ -132,8 +132,8 @@
       </form>
 
 <!-- Adding an iframe that displays results to user -->
-          <center><iframe id="results" name="results">
-		</iframe></center>
+      <iframe id="results" name="results">
+		</iframe>
     
 <!-- Link back to home page -->
     <center>

@@ -56,6 +56,11 @@ h3 {
   font-family: times new roman;
 }
 
+iframe {
+  width: 40%;
+  margin-left: 40%;
+}
+
 .glow {
   font-size: 80px;
   color: #fff;

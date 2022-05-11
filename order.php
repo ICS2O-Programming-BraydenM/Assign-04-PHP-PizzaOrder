@@ -83,5 +83,5 @@
   $total = $subTotal + $tax;
 
 // display results back to user
-  echo "Your subtotal is $" . number_format($subTotal, 2) . ".<br>The amount of tax added is $" . number_format($tax, 2) . ".<br>Your total is $" . number_format($total, 2) . ".";
+  echo "Your subtotal is $" . number_format($subTotal, 2) . ".<br>The amount of tax added is $" . number_format($tax, 2) . ".<br>Your total is $" . number_format($total, 2) . "." . "<br>Thank you for ordering from us, we hope to see you again soon :)";
 ?>
