@@ -5,6 +5,13 @@
     define(HST, 0.13);
     // constant topping price
     define(TOPPING_PRICE, 0.50);
+    // costs for each combination of pizza size and crust type
+    define(SMALL_FLATBREAD, 7.79);
+    define(SMALL_STUFFED, 10.79);
+    define(MED_FLATBREAD, 14.25);
+    define(MED_STUFFED, 17.25);
+    define(LARGE_FLATBREAD, 19.87);
+    define(LARGE_STUFFED, 22.87);
 
     //get user input for pizza size and crust type
    $pizzaSize = $_POST['size'];
@@ -15,32 +22,32 @@
 
   // finding the cost of size and type of crust for the pizza before toppings and side of wine
     if (($pizzaSize == "small") && ($crustType == "flatbread")) {
-      $baseCost = 7.79;
+      $baseCost = SMALL_FLATBREAD;
     }
     else if (($pizzaSize == "small") && ($crustType == "stuffed")) {
-      $baseCost = 10.79;
+      $baseCost = SMALL_STUFFED;
     }
     else if (($pizzaSize == "medium") && ($crustType == "flatbread")) {
-      $baseCost = 14.25;
+      $baseCost = MED_FLATBREAD;
     }
     else if (($pizzaSize == "medium") && ($crustType == "stuffed")) {
-      $baseCost = 17.25;
+      $baseCost = MED_STUFFED;
     }
     else if (($pizzaSize == "large") && ($crustType == "flatbread")) {
-      $baseCost = 19.87;
+      $baseCost = LARGE_FLATBREAD;
     }
     else if (($pizzaSize == "large") && ($crustType == "stuffed")) {
-      $baseCost = 22.87;
+      $baseCost = LARGE_STUFFED;
     }
   
-  // check all check boxes to see how many there are, from https://www.techiedelight.com/count-number-check-boxes-javascript/
+  // check all checkboxes to see how many there are, from https://www.techiedelight.com/count-number-check-boxes-javascript/
  
     // initialized variable for topping cost 
      $numberOfToppings = 0;
 
   // changing the number of toppings based on checkboxes selected (beginning with if cheese is clicked)
   if (isset($_POST["topping1"])){
-   //++ adds one to the total number of chexkboxes
+   //++ adds one to the total number of checkboxes
    $numberOfToppings++;
    }
   //if black olives are clicked

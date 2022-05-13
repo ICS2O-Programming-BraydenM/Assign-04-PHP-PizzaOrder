@@ -70,7 +70,7 @@
   </center>
   <center>
     <?php
-    echo "<p>The founder of Star Sun Pizzeria, Brayden MacMillan, originally was born and raised in Ottawa, Canada, but came to Italy to start a new life here and had a lifelong dream of opening an Italian pizzeria right here, in Positano, Italy! Unfortunately, he passed away last year, but he was 97 years old! His legacy will live on forever in this business, and we will always give thanks to him for creating this wonderful community. We have now been at this location for 64 years, since 2040! All of our employees have a passion for crafting top tier Italian pizzas, and we hope to see you on our cliffside padio this summer :)  </p>";
+    echo "<p>The founder of Star Sun Pizzeria, Brayden MacMillan, originally was born and raised in Ottawa, Canada, but came to Italy to start a new life here and had a lifelong dream of opening an Italian pizzeria right here, in Positano, Italy! Unfortunately, he passed away last year, but he was 97 years old! His legacy will live on forever in this business, and we will always give thanks to him for creating this wonderful community. We have now been at this location for 64 years, since 2040! All of our employees have a passion for crafting top tier Italian pizzas, and we hope to see you on our cliffside patio this summer :)  </p>";
 ?>
 </center>
 
